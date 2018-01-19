@@ -88,11 +88,11 @@
     <script>
         // loading控制函数
         function loadingComputer() {
-            let imageArray = document.getElementsByTagName("img");
-            let readyImgNum;
-            let imgLoad = setInterval(function () {
+            var imageArray = document.getElementsByTagName("img");
+            var readyImgNum;
+            var imgLoad = setInterval(function () {
                 readyImgNum = 0;
-                for (let i = 0; i < imageArray.length; i++) {
+                for (var i = 0; i < imageArray.length; i++) {
                     if (imageArray[i].complete) {
                         readyImgNum++;
                     }
