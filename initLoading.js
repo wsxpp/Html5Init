@@ -24,7 +24,7 @@ function addImagesDomToXml(filesArr) {
             }
             let dom = '';
             for (let i = 0; i < filesArr.length; i++) {
-                dom += '<img hidden src="' + filesArr[i] + '">\n'
+                dom += '<img hidden src="/images/' + filesArr[i] + '">\n'
             }
             res(dom);
         });
