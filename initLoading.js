@@ -13,25 +13,32 @@ function readImagesToArr() {
 }
 function addImagesDomToXml(filesArr) {
     return new Promise((res,rej)=>{
-        fs.open('needloadingImages.xml', 'a+', (err, fd) => {
+        fs.open('es2015/loading.ts', 'a+', (err, fd) => {
             if (err) {
                 if (err.code === 'ENOENT') {
                     console.error('myfile does not exist');
                     return;
                 }
-    
                 throw err;
             }
-            let dom = '';
+            let dom = 'new MyLoader([';
             for (let i = 0; i < filesArr.length; i++) {
-                dom += '<img hidden src="images/' + filesArr[i] + '">\n'
+                if(i===filesArr.length-1){
+                    dom += '"images/' + filesArr[i] + '"'
+                }else{
+                    dom += '"images/' + filesArr[i] + '",'
+                }
             }
-            res(dom);
+            dom+='])';
+            res({
+                fd:fd,
+                dom:dom
+            });
         });
     })
 }
-function writeXML(dom) {
-    fs.writeFile('needloadingImages.xml', dom, (err) => {
+function writeXML(fd,dom) {
+    fs.write(fd, dom, 0, 'utf-8', (err, written, string) => {
         if (err) throw err;
         console.log('The file has been saved!');
     })
@@ -44,6 +51,6 @@ Promise
     .then((filesArr)=>{
         return addImagesDomToXml(filesArr)
     })
-    .then((dom)=>{
-        writeXML(dom)
+    .then((object)=>{
+        writeXML(object.fd,object.dom)
     })
