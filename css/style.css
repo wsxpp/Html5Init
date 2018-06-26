@@ -1,0 +1,52 @@
+#__bs_notify__ {
+  font-size: 16px; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  font: 12px/1.5 arial, "\5fae\8f6f\96c5\9ed1"; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: block;
+  clear: both; }
+
+.text-bold {
+  font-weight: bolder; }
+
+html,
+body {
+  width: 100%;
+  height: 100%; }
+
+button,
+input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: inherit;
+  color: inherit; }
+
+.overtext {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+div {
+  position: relative;
+  box-sizing: border-box; }
+
+/*# sourceMappingURL=maps/style.css.map */

@@ -49,7 +49,7 @@
 	 * 引入css
 	 */
 	var styleDom = document.createElement("style");
-	styleDom.innerHTML = '*{margin:0;padding:0;}.loading-container{width:100%;height:100%;position:fixed;}.spinner {margin: 50% auto;width: 50px;height: 60px;text-align: center;font-size: 10px;}.spinner>div {margin:0 1px;background-color: #67CF22;height: 100%;width: 6px;display: inline-block;-webkit-animation: stretchdelay 1.2s infinite ease-in-out;animation: stretchdelay 1.2s infinite ease-in-out;}.spinner .rect2 {-webkit-animation-delay: -1.1s;animation-delay: -1.1s;}.spinner .rect3 {-webkit-animation-delay: -1.0s;animation-delay: -1.0s;}.spinner .rect4 {-webkit-animation-delay: -0.9s;animation-delay: -0.9s;}.spinner .rect5 {-webkit-animation-delay: -0.8s;animation-delay: -0.8s;}@-webkit-keyframes stretchdelay {0%,40%,100% {-webkit-transform: scaleY(0.4)}20% {-webkit-transform: scaleY(1.0)}}@keyframes stretchdelay {0%,40%,100% {transform: scaleY(0.4);-webkit-transform: scaleY(0.4);}20% {transform: scaleY(1.0);-webkit-transform: scaleY(1.0);}}';
+	styleDom.innerHTML = '*{margin:0;padding:0;}#loading-container{background:white;width:100%;height:100%;position:fixed;top:0;left:0;z-index:999;}.spinner {margin: 50% auto;width: 50px;height: 60px;text-align: center;font-size: 10px;}.spinner>div {margin:0 1px;background-color: #67CF22;height: 100%;width: 6px;display: inline-block;-webkit-animation: stretchdelay 1.2s infinite ease-in-out;animation: stretchdelay 1.2s infinite ease-in-out;}.spinner .rect2 {-webkit-animation-delay: -1.1s;animation-delay: -1.1s;}.spinner .rect3 {-webkit-animation-delay: -1.0s;animation-delay: -1.0s;}.spinner .rect4 {-webkit-animation-delay: -0.9s;animation-delay: -0.9s;}.spinner .rect5 {-webkit-animation-delay: -0.8s;animation-delay: -0.8s;}@-webkit-keyframes stretchdelay {0%,40%,100% {-webkit-transform: scaleY(0.4)}20% {-webkit-transform: scaleY(1.0)}}@keyframes stretchdelay {0%,40%,100% {transform: scaleY(0.4);-webkit-transform: scaleY(0.4);}20% {transform: scaleY(1.0);-webkit-transform: scaleY(1.0);}}';
 	document.head.appendChild(styleDom);
 	/**
 	 * 引入dom部分
@@ -98,7 +98,7 @@
 	    document.body.removeChild(loadingDom);
 	    document.head.removeChild(styleDom);
 	}
-	new MyLoader(["images/111.jpg", "images/btn-1.png", "images/btn-android.png", "images/btn-ios.png", "images/close.png", "images/index-bg.jpg", "images/livingRoom.jpg", "images/livingRoomEmpty.jpg", "images/logo.png", "images/myHonor-bg.jpg", "images/noHonor-bg.jpg", "images/rule.png", "images/test.jpg", "images/world.jpg"]);
+	new MyLoader(["images/btn-1.png", "images/btn-2.png", "images/btn-3.png", "images/btn-4.png", "images/btn-5.png", "images/index-bg.jpg", "images/index2-bg.jpg", "images/index3-bg.jpg", "images/logo.png", "images/qian-step-1.png", "images/qian-step-2.png", "images/qian.png", "images/share-bg.jpg", "images/share.png", "images/span-1.png", "images/span-10.png", "images/span-2.png", "images/span-3.png", "images/span-4.png", "images/span-5.png", "images/span-6.png", "images/span-7.png", "images/span-8.png", "images/span-9.png"]);
 
 
 /***/ })
